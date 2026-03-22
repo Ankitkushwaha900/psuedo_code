@@ -1,0 +1,552 @@
+
+
+// declare number: Integer
+// declare a: Integer
+// delcare sum: Integer
+// Read number
+// Set sum=0
+
+// while(number>0){
+//        a= number%10;
+//        n= n/10
+//        b= b*10+a
+//        endwhile
+//        print b;
+// }
+
+import java.util.*;
+public class AddAllDigit {
+    public static void main(String[] args) {
+         Scanner sc= new Scanner(System.in);
+        System.out.print("Enter the number :");
+        int number= sc.nextInt();
+        int a;
+        int sum=0;
+
+        while(number>0){
+             a= number%10;
+             number = number/10;
+             sum+=a;
+        }
+        System.out.println(sum);
+    }
+}
+---------------------------------------------
+
+
+
+/* function palindorme(n:Integer)String
+       declare a=Integer
+       delcare b= Integer
+       set b= 0
+       while(n>0)
+           a=a%10
+           n=n/10
+           b=b*10+a
+
+           if(b==n)
+                return true
+           else  
+                return false
+            end if
+            end while
+            end function 
+            call palindrome(12345)
+ */
+
+public class function_cheque_palindrome {
+    public static void main(String[]args){
+        System.out.println(palindome(12345));
+    }
+    public static boolean  palindome(int n){
+        int original=n;
+        int a;
+        int b=0;
+        while(n>0){
+               a=n%10;
+               n=n/10;
+               b=b*10+a;
+
+                                                         
+        }
+        return original==n;
+           
+    }
+}
+
+--------------------------------------------
+
+
+/* function Aoc(radius:real)
+       return 3.14*radius*radius;
+       end function
+       pront Aoc(6.53);
+*/public class Function_circle_area {
+    public static void main(String[]args){
+        System.out.println(AOC(6.5));
+    }
+    public static double  AOC(double radius){
+           double result;
+           result= 3.14*radius*radius;
+           return result;
+    }
+}
+
+--------------------------------------------
+
+
+/*  function factorial(n: Integer)
+       declare fact: Integer
+       set fact=1
+       fo(int i=1;i<n; i++)
+          fact= fact*i;
+          end for
+        end function
+        print factorial(5);  
+*/public class function_factorial {
+    public static void main(String[] args) {
+         System.out.println(factorial(5));
+    }
+    public static int factorial(int n){
+           int fact=1;
+           for(int i=1; i<n; i++){
+                 fact= fact*i;
+           }
+           return fact;
+
+    }
+}
+
+
+-------------------------------------------------
+
+/* function max(a:Integer, b:Integer)
+         if(a>b)
+            return a
+         else 
+            return b
+        end function
+        print max(2,5);
+ */
+public class function_find_max_2nums {
+    public static void main(String[] args) {
+         System.out.println(Max(2,5));       
+    }
+    public static int Max(int a, int b){
+           if(a>b){
+              return a;
+           }else
+              return b;
+    }
+}
+
+------------------------------------------------
+
+/* function sumseris(n:Integer)
+      declare sum : Integer
+        set sum=0;
+      for i=1 to n 
+          sum+=1.0/i;
+       end for
+       return sums
+       end function
+       print sumseris(5)
+ */
+
+public class function_sum_fractionSeries {
+    public static void main(String[]args){
+         System.out.println(sum(7));
+    }
+    public static double sum(int n){
+        double sum=0.0;
+        for(int i=1; i<=n; i++){
+              sum=sum+1.0/i;
+        }
+        return sum;
+    }
+}
+
+
+--------------------------------------------------
+
+
+/* function sumseris(n:Integer)
+      declare sum : Integer
+        set sum=0;
+      for i=1 to n 
+          sum+=i;
+       end for
+       return sums
+       end function
+       print sumseris(5)
+ */
+public class function_sum_series {
+    public static void main(String[]args){
+         System.out.println(sum(5));
+    }
+    public static int sum(int n){
+        int sum=0;
+        for(int i=1; i<=n; i++){
+              sum=sum+i;
+        }
+        return sum;
+    }
+}
+
+
+-------------------------------------------------
+
+public class function_triangle_area {
+    public static void main(String[]args){
+        System.out.println(AOT(3.0, 5.5));
+    }
+    public static double AOT(double b, double h){
+              double result;
+              result= 0.5*b*h;
+              return result;
+    }
+}
+-----------------------------------------------
+
+/*  Enter the number and search that number which present or not
+
+     declare number:Integer
+     declare a: Integer
+     declare digit: Integer
+     boolean found= true
+     read number
+     read digit
+
+     while(number>0){
+            a= number%10
+            n= n/10
+            if(a==digit)
+               fount = flase; 
+               break
+     }
+               if(found==true)
+                  print "search successful"
+               else
+                  print "search failure"
+ */
+
+
+import java.util.*;
+public class peuedo3 {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter the number :");
+        int number= sc.nextInt();
+        System.out.print("Enter the digit :");
+        int digit= sc.nextInt();
+        int a;
+        boolean found= true;
+        while(number>0){
+             a= number%10;
+             number=number/10;
+             if(a==digit){
+                found= true;
+             }
+             
+             }
+             if(found==true){
+                System.out.print("digit is found");
+
+             }else{
+        }
+    }
+}
+--------------------------------------------------------
+
+/*  procedure max(Integer:a, Integer:b)
+        if(a>b) then
+           print a
+        else
+            print b
+        end procedure
+        call max(10,30)
+*/public class Procdure_Max_With_2nums {
+     public static void main(String[] args) {
+          Max(10,30); 
+     }   
+     public static void Max(int a,int b){
+           if(a>b){
+             System.out.println(a);
+           }else
+            System.out.println(b);
+     }
+}
+---------------------------------------------------------
+
+/* procedure add(a:Integer, b:Integer)
+        declare c=Interger
+        print c= a+b;
+        end procedure
+        call add(12,13);
+ */
+
+public class Procedure_add_argument {
+    public static void main(String[]args){
+         add(12,13);
+    }
+    public static void add(int a, int b){
+          int c;
+          c= a+b;
+          System.out.println(c);
+    }
+}
+-------------------------------------------------------
+
+/* porcedure cube(a:Integer)
+       declare cubes: Integer
+         cubes= a*a*a;
+         end procdeure
+         call cube(10)
+ */
+public class Procedure_cube_argument {
+    public static void main(String[]args){
+         cube(10);
+    }
+    public static void cube(int a){
+           int cubes;
+           cubes=a*a*a;
+           System.out.println(cubes);
+    }
+}
+
+
+--------------------------------------------------------
+
+
+
+public class Procedure_Max_With_3nums {
+    public static void main(String[]args){
+         Max(12,34,21);
+    }
+    public static void Max(int a, int b, int c){
+        if(a>b && a>c ){
+            System.out.println(a);
+        }else if(b>c && b>a){
+            System.out.println(b);
+        } else{
+            System.out.println(c);
+        }
+    }
+}
+
+
+----------------------------------------------------
+
+
+/*procedure pn(p:string)
+     print p
+     end procedure
+     call pn("name");
+      */
+
+public class Procedure_Print_Name_argu {
+    public static void main(String []args){
+          pn("ankit");
+    }
+    public static void pn(String p){
+          System.out.println(p);
+    }
+}
+
+
+-------------------------------------------------------
+
+/* procedure pn()
+        print"name";
+        end procedure
+        call pn();
+ */
+
+public class Procedure_Print_name {
+    public static void main(String[] args) {
+         pn();
+    }  
+     public static void pn(){
+            System.out.println("name");
+        } 
+}
+
+
+-------------------------------------------------------
+
+/* procedure SimpleIntrest(P:Integer, T:real, R:real)
+        declare intrest= real
+         intrest= (P*T*R)/100
+         end procedure
+         call simpleIntrest(1000,2.5,11.0);
+ */
+
+public class Procedure_Simple_Intrest {
+    public static void main(String[] args) {
+        Intrest(1000, 2.5, 11.0);
+    }
+    public static void Intrest(int p, double  t, double  r){
+           double result;
+            result=(p*r*t)/100;
+              System.out.println(result);
+    }
+}
+
+
+
+-------------------------------------------------------
+
+
+
+public class PseudoCode4 {
+    
+    public static void main(String[] args) {
+        int x;
+        int y;
+        for( x=1;x<11; x++){
+            x=x+2;
+        }
+        System.out.println(x);
+    }
+}
+
+// int x;
+// int y;
+// for(eact x from 1 to 11)
+//     x+=2
+// endfor 
+//     print x
+
+-----------------------------------------------------------
+
+
+/*  declare number: Integer
+    declaer a: Integer
+    declare d: Integer
+    declare b: Integer
+    Set b=0
+    Read number
+     while(number>0){
+          a= number&10;
+          number= number/10;
+          b=b*10+a;
+          endwhile
+          peint b;
+     }
+ */
+
+
+import java.util.*;
+public class PseudoReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int number = sc.nextInt();
+          int a;
+          int b=0;
+          while(number>0){
+               a= number%10;
+               number=number/10;
+               b=b*10+a;
+
+          }
+          System.out.println("Reverse order: "+b);
+      }
+}
+
+
+-------------------------------------------------------------
+
+
+// import java.util.*;
+public class psuedo{
+    public static void main(String[] args) {
+        // Scanner sc= new Scanner(System.in);
+        int q=13;
+         int r;
+
+         for(int p=1; p<=4; p++){
+            r=q%p;
+            p=p+5;
+            q=p+r;
+         }
+         r=q/5;
+         System.out.println(q+" "+r);
+    }
+}
+
+-----------------------------------------------------------
+
+
+/* i want to count the number how many time digit present in here
+
+     decare n: Integer
+     declare digit: Integer
+     declare a= Integer
+     declare count= Integer
+     Read n,d
+     set count=0
+
+     while(n>0){
+           a= n%10
+           n= n/10
+           if(a==digit)
+             count++;
+            
+            
+     }
+           print count;
+ */
+import java.util.*;
+public class psuedo2 {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+         System.out.print("enter the number"); 
+         int n=sc.nextInt();  
+         System.out.print("enter the digit");  
+       int digit= sc.nextInt(); 
+       int a;
+       int count=0;
+       while(n>0){
+                  a= n%10;
+                  n= n/10;
+                 if(digit==a){
+                    count++;
+                 }
+                 
+       }
+       System.out.print(count);
+    }
+}
+
+
+------------------------------------------------------
+
+import java.util.Scanner;
+
+public class PsuedoFibonacciSeries {
+    public static void main(String[] args) {
+         Scanner sc= new Scanner(System.in);
+        System.out.print("Enter the number :");
+        int number = sc.nextInt();
+        int prev=0;
+        int next=1;
+        int sum=0;
+        System.out.print(prev+" ");
+        System.out.print(next+ " ");
+        while(sum<=number){
+            sum= prev+next;
+            System.out.print(sum+ " ");
+            prev= next;
+            next= sum;
+        }
+    }
+}
+
+
+
+
+
+
+
+
