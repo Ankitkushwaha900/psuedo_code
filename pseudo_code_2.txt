@@ -542,9 +542,180 @@ public class PsuedoFibonacciSeries {
         }
     }
 }
+-------------------------------------------------------------------------
+ Count of number : Pseudocode
+DECLARE NUM : INTEGER
+DECLARE A = INTEGER
+DECALRE D = INTEGER
+DECLARE CNT = INTEGER
+SET CNT := 0
+READ NUM 
+READ D
+WHILE NUM>0
+		A:=NUM MOD 10
+		IF A==D THEN
+			INCREMENT CNT 
+                    END IF
+			NUM : = NUM/10
+	END WHILE
+PRINT CNT
+
+PROGRAM IN JAVA :-------
+     import java.util.Scanner;
+     class CountDigit {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        int d = sc.nextInt();
+        int cnt = 0;
+
+        while (num > 0) {
+            int a = num % 10;
+
+            if (a == d) {
+                cnt++;
+            }
+
+            num = num / 10;
+        }
+
+        System.out.println(cnt);
+    }  
+}
+
+-----------------------------------------------------------------------------
+
+ Print Array : Pseudocode
+DECLARE A : ARRAY[0:4] OF INTEGER
+FOR I = 0 TO 4
+ 	READ A[I]
+END FOR
+FOR I:= 0 TO 4
+	PRINT A[I]
+END FOR
+
+    PROGRAM IN JAVA :-------
+         import java.util.Scanner;
+       class ArrayPrint {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int[] a = new int[5];
+
+        for (int i = 0; i < 5; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println(a[i]);
+        }
+    }
+}
+
+------------------------------------------------------------------------------------
 
 
+24. Maximum in Array : Pseudocode
+DECLARE A : ARRAY[5] OF INTEGER
+DECLARE MAX : INTEGER
+FOR I: = 0 TO 4
+	READ A[I]
+END FOR
+SET MAX : = A[0]
+FOR I = 0 TO 4
+	IF A[I] > MAX THEN
+		MAX := A[I]
+	END IF
+	END FOR
+		PRINT MAX
+    PROGRAM IN JAVA :-------
+     import java.util.Scanner;
+     class MaxArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a[] = new int[5];
 
+        for(int i=0;i<5;i++)
+            a[i] = sc.nextInt();
+
+        int max = a[0];
+
+        for(int i=1;i<5;i++)
+            if(a[i] > max)
+                max = a[i];
+
+        System.out.println(max);
+    }
+}
+
+-----------------------------------------------------------------------------------
+
+18. Armstrong Number : Pseudocode
+DECLARE NUM : INTEGER
+DECLARE A : INTEGER
+DECLARE B : INTEGER
+DECLARE N : INTEGER
+SET B : = 0
+READ NUM 
+N : =  NUM
+WHILE NUM>0
+	A:= NUM MOD 10
+	B:= B +A*A*A
+	NUM:=NUM/10
+END WHILE
+	IF B ==N THEN 
+		PRINT “ARMSTRONG”
+	ELSE
+		PRINT”NOT ARMSTRONG”
+	END IF
+
+PROGRAM IN JAVA :-------
+   import java.util.Scanner;
+ class Armstrong {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(), temp=n, sum=0;
+
+        while(n>0){
+            int d = n%10;
+            sum += d*d*d;
+            n/=10;
+        }
+
+        if(sum==temp)
+            System.out.println("ARMSTRONG");
+        else
+            System.out.println("NOT ARMSTRONG");
+    }
+}
+
+----------------------------------------------------------------------------------
+
+13. Multiplication Table (FOR) : Pseudocode
+DECLARE I = INTEGER
+DECLARE NUM = INTEGER
+SET I = 1
+READ NUM 
+WHILE I<= 10
+ 		PRINT NUM * I
+		INCREMENT I
+END WHILE
+
+   PROGRAM IN JAVA :-------
+          import java.util.Scanner;
+        class Table {
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int i=1;i<=10;i++)
+            System.out.println(n*i);
+    }
+}
+
+------------------------------------------------------------------------------
 
 
 
